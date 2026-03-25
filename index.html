@@ -12,7 +12,7 @@
       --B: #0A70B8;
       --BD: #0E2B82;
       --N: #0A1B44;
-      --R: #E33F3F;
+      --R: #111010;
       --RD: #C0302F;
       --W: #FFFFFF;
       --F: #F5F8FD;
@@ -368,7 +368,7 @@
 
     /* ══════════ SECTION BASE ══════════ */
     .sec {
-      padding: 96px 6vw
+      padding: 48px 6vw
     }
 
     .sec-light {
@@ -1103,7 +1103,7 @@
     }
 
     .csubmit {
-      background: linear-gradient(135deg, var(--R), var(--RD));
+      background: linear-gradient(135deg, var(--BD), var(--BD));
       color: #fff;
       border: none;
       border-radius: 6px;
@@ -1116,14 +1116,14 @@
       cursor: pointer;
       width: 100%;
       margin-top: 4px;
-      box-shadow: 0 4px 18px rgba(227, 63, 63, .25);
+      box-shadow: 0 4px 18px rgba(7, 3, 235, 0.25);
       transition: transform .15s, box-shadow .15s, background var(--ease);
     }
 
     .csubmit:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 26px rgba(227, 63, 63, .35);
-      background: var(--R)
+      box-shadow: 0 8px 26px rgba(20, 4, 245, 0.35);
+      background: var(--BD)
     }
 
     .cform-note {
@@ -1441,8 +1441,9 @@
 
   <!-- NAV -->
   <nav id="navbar">
-    <a class="nav-logo" href="#home"><img src="img/NeoLotex-Logo-Recreation-Jpeg-01-500x138.jpg.bv.webp" alt="" style="width: 130px;"></a>
-        
+    <a class="nav-logo" href="#home"><img src="img/NeoLotex-Logo-Recreation-Jpeg-01-500x138.jpg.bv.webp" alt=""
+        style="width: 130px;"></a>
+
     <ul class="nav-links" id="navLinks">
       <li><a href="#home">Home</a></li>
       <li><a href="#services">Services</a></li>
@@ -1504,14 +1505,34 @@
   </section>
 
   <!-- SERVICES -->
+
   <section id="services" class="sec sec-soft">
     <div class="reveal">
       <div class="stag">What We Do</div>
-      <h2 class="stitle">Five Pillars of <span>Enterprise</span> Excellence</h2>
+      <h2 class="stitle"><span>Document Management System </span></h2>
       <p class="sdesc">Distinct lines of business, each delivering a holistic solution that complements your enterprise
         growth and digital transformation journey.</p>
     </div>
-    <div class="svc-grid reveal">
+
+    <div class="svc">
+    
+      <div class="svc-ico">🗃️</div>
+      <div class="svc-title">KareDocs</div>
+      <p class="svc-desc">Document scanning, data entry, digital MRD, and data management — transforming physical
+        archives into intelligent, searchable assets.</p>
+      <a class="svc-link" href="https://neolotex.com/products/karedocs" target="_blank">Learn More →</a>
+    </div>
+
+    </div>
+  </section>
+  <section id="services" class="sec sec-soft">
+    <div class="reveal">
+
+      <h2 class="stitle"><span>Enterprise Excellence</h2>
+      <p class="sdesc">Distinct lines of business, each delivering a holistic solution that complements your enterprise
+        growth and digital transformation journey.</p>
+    </div>
+    <!-- <div class="svc-grid reveal">
       <div class="svc">
         <div class="svc-num">01</div>
         <div class="svc-ico">⚡</div>
@@ -1519,24 +1540,22 @@
         <p class="svc-desc">Platform to Expedite Transformation of Any Business — a unified ecosystem for document,
           workflow, and process automation at enterprise scale.</p>
         <a class="svc-link" href="#products">Explore →</a>
-      </div>
-      <div class="svc">
+      </div> -->
+    <!-- <div class="svc">
         <div class="svc-num">02</div>
         <div class="svc-ico">💻</div>
         <div class="svc-title">Application Development</div>
         <p class="svc-desc">Bespoke software, mobile apps, QA testing and consultancy. Built around your specific
           business objectives and tailored to your workflows.</p>
         <a class="svc-link" href="#contact">Learn More →</a>
-      </div>
-      <div class="svc">
-        <div class="svc-num">03</div>
-        <div class="svc-ico">🗃️</div>
-        <div class="svc-title">Enterprise Digitization</div>
-        <p class="svc-desc">Document scanning, data entry, digital MRD, and data management — transforming physical
-          archives into intelligent, searchable assets.</p>
-        <a class="svc-link" href="#contact">Learn More →</a>
-      </div>
-      <div class="svc">
+      </div> -->
+    <div class="svc">
+      <div class="svc-ico">🗃️</div>
+      <div class="svc-title">Enterprise Digitization</div>
+      <p class="svc-desc">Transform manual operations into connected digital workflows NeoLotex Enterprise Digitization services help businesses convert document-heavy and manual processes into efficient, trackable, and scalable digital operations.</p>
+      <a class="svc-link" href="https://neolotex.com/services/ed/" target="_blank">Learn More →</a>
+    </div>
+    <!-- <div class="svc">
         <div class="svc-num">04</div>
         <div class="svc-ico">📞</div>
         <div class="svc-title">Contact Center</div>
@@ -1551,7 +1570,7 @@
         <p class="svc-desc">Streamline your recruitment process and achieve talent acquisition goals with our end-to-end
           Recruitment Process Outsourcing solutions.</p>
         <a class="svc-link" href="#contact">Learn More →</a>
-      </div>
+      </div> -->
     </div>
   </section>
 
@@ -1925,7 +1944,8 @@
   <footer>
     <div class="ft-grid">
       <div>
-        <span class="ft-logo"><span class="bl">Neo</span><span class="rd">·</span>Lotex</span>
+       <a class="nav-logo" href="#home"><img src="img/NeoLotex-Logo-Recreation-Jpeg-01-500x138.jpg.bv-removebg-preview.png" alt=""
+        style="width: 167px;"></a>
         <p class="ft-about">Beyond Digitization — your intelligent automation partner for enterprise document
           management, workflow automation, and business process solutions. Established 2010, Bangalore, India.</p>
       </div>
