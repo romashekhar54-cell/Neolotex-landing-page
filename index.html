@@ -1991,6 +1991,83 @@
       color: rgba(255, 255, 255, .65)
     }
 
+
+    /* ════════════════════ FAQ ════════════════════ */
+    #faq {
+      padding: 100px 0;
+      background: var(--w)
+    }
+
+    .faq-wrap {
+      margin-top: 48px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px
+    }
+
+    .faq-item {
+      border: 1px solid rgba(10, 112, 184, .12);
+      border-radius: var(--r12);
+      background: var(--w);
+      overflow: hidden;
+      box-shadow: 0 2px 14px rgba(10, 27, 68, .05);
+      transition: border-color var(--ease), box-shadow var(--ease)
+    }
+
+    .faq-item:hover {
+      border-color: rgba(10, 112, 184, .28);
+      box-shadow: 0 8px 24px rgba(10, 27, 68, .08)
+    }
+
+    .faq-question {
+      width: 100%;
+      background: transparent;
+      border: none;
+      outline: none;
+      padding: 22px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      text-align: left;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+      font-size: .95rem;
+      font-weight: 600;
+      color: var(--n)
+    }
+
+    .faq-icon {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--b);
+      transition: transform var(--ease);
+      flex-shrink: 0
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .35s ease, padding .35s ease;
+      padding: 0 24px
+    }
+
+    .faq-answer p {
+      font-size: .84rem;
+      font-weight: 300;
+      color: var(--tl);
+      line-height: 1.8;
+      padding-bottom: 22px
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 240px
+    }
+
+    .faq-item.active .faq-icon {
+      transform: rotate(45deg)
+    }
+
     /* ════════════════════ ANIMATIONS ════════════════════ */
     @keyframes slideUp {
       from {
@@ -2160,6 +2237,20 @@
 
       .hero-trust {
         gap: 18px
+      }
+
+      .faq-question {
+        font-size: .86rem;
+        padding: 18px 18px
+      }
+
+      .faq-answer {
+        padding: 0 18px
+      }
+
+      .faq-answer p {
+        font-size: .8rem;
+        line-height: 1.75
       }
     }
   </style>
@@ -2880,6 +2971,119 @@
     </div>
   </section>
 
+
+  <!-- ══════════════ FAQ ══════════════ -->
+  <section id="faq">
+    <div class="container">
+      <div class="reveal">
+        <div class="section-tag">Frequently Asked Questions</div>
+        <h2 class="sec-h">Still Have Questions? <span>We’ve Got You Covered.</span></h2>
+        <p class="sec-p">Quick answers to the most common questions enterprises ask before choosing a Document Management System.</p>
+      </div>
+      <div class="faq-wrap reveal">
+        <div class="faq-item active">
+          <button class="faq-question" type="button">
+            <span>What is KareDocs and how does it help our business?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>KareDocs is NeoLotex’s enterprise document management system that centralizes your documents in one secure platform. It helps reduce search time, improve process control, strengthen compliance, and make documents easier to retrieve, share, and govern across departments.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>What types of documents can KareDocs manage?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>KareDocs can manage contracts, invoices, KYC files, HR records, medical documents, operational documents, audit records, legal files, policy documents, archive files, and many other business-critical records across industries.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>How quickly can users find documents in KareDocs?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Documents can be retrieved in seconds using metadata filters, folder structures, OCR-based full-text search, and intelligent indexing. This helps teams reduce time spent on manual document lookup and improves everyday productivity.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>Is KareDocs secure enough for sensitive business documents?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. KareDocs supports role-based access control, document-level permissions, audit trails, version history, and secure storage options. It is designed for organizations that need strong document governance and tighter control over sensitive information.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>Can KareDocs support compliance and audit requirements?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. KareDocs maintains audit trails for document activity, preserves version history, and helps organizations stay audit-ready by ensuring documents are organized, traceable, and easier to review during internal and regulatory checks.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>Can KareDocs automate approvals and document workflows?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. KareDocs can route documents through approval, review, and validation workflows so teams can reduce manual follow-up, eliminate bottlenecks, and improve turnaround time for document-driven processes.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>Does KareDocs work for industries like BFSI, NBFC, Healthcare, and Logistics?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. KareDocs is well suited for document-heavy industries such as BFSI, NBFC, Healthcare, Logistics, Manufacturing, Government, HR, and Finance where secure access, faster retrieval, and better control over records are critical.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>Can KareDocs be deployed on-premise or in the cloud?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. KareDocs supports on-premise, cloud, and hybrid deployment models, giving organizations flexibility based on their infrastructure, security preferences, and compliance needs.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>Will KareDocs integrate with our existing business systems?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. KareDocs can be aligned with enterprise workflows and integrated with related business applications such as ERP, LOS, CRM, HR, finance, and other operational systems depending on your implementation needs.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>How do we get started with KareDocs?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>The best first step is to book a demo. NeoLotex can understand your document challenges, business processes, and industry requirements, then recommend the right KareDocs approach for your organization.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ══════════════ CONTACT ══════════════ -->
   <section id="contact">
     <div class="container">
@@ -3127,6 +3331,17 @@
       ['f-name', 'f-email', 'f-phone'].forEach(id => document.getElementById(id).value = '');
       document.getElementById('home').scrollIntoView({ behavior: 'smooth' });
     }
+
+    /* ── FAQ Accordion ── */
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const isActive = item.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach(faq => faq.classList.remove('active'));
+        if (!isActive) item.classList.add('active');
+      });
+    });
+
   </script>
 </body>
 
